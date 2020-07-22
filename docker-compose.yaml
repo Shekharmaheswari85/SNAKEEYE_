@@ -6,7 +6,7 @@ services:
     command: >
       gunicorn -p 8000:8000 -b 0.0.0.0:8000 --access-logfile - --reload "snakeeyes.app:create_app()"
     environment: 
-      PYTHONBUFFERED: 'true'
+      PYTHONUNBUFFERED: 'true'
     volumes: 
       - '.:/snakeeyes'
     ports: 

@@ -1,6 +1,6 @@
 FROM python:3.7
 
-ENV INSTALL_PATH /snackeyes
+ENV INSTALL_PATH /snakeeyes
 RUN mkdir -p ${INSTALL_PATH}
 
 WORKDIR ${INSTALL_PATH}
