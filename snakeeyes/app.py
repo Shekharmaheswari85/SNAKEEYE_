@@ -7,7 +7,12 @@ def create_app():
 
     :return: Flask app
     """
-    app = Flask(__name__, instance_relative_config=True)
+    app = Flask(__name__, instance_relative_config=True)  
+    '''
+    instance_relative_config will tell the application
+    to look for configuration in the 
+    settings.py on the instance varible file
+    '''
 
     app.config.from_object('config.settings')
     app.config.from_pyfile('settings.py', silent=True)
