@@ -1,0 +1,23 @@
+For testing flask application we use <pytest>
+
+after executing the docker image <<docker-compose up>>
+we have to type this command in the new command line
+docker-compose exec website py.test snakeeyes/tests
+for Cov report file we user pytest-cov
+
+docker-compose exec website py.test --cov-report term-missing --cov snakeeyes
+
+
+--cov snakeeyes because we want to test the whole code base itself
+
+term-missing  ->> term--->output the terms in the terminal and missing means head the line no where the file is being missing
+
+
+
+for static analysis of our flask application we use the flake8
+
+docker-compose exec website flake8 .
+
+for excluding a perticular py file from the codebase
+
+docker-compose exec website flake8 . --exclude __init__.py
