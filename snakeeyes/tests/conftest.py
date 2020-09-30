@@ -3,7 +3,7 @@ import pytest
 from snakeeyes.app import create_app
 
 
-@pytest.yield_fixture(scope="session")
+@pytest.yield_fixture(scope='session')
 def app():
     """
     Setup our flask test app, this only gets executed once.
@@ -11,8 +11,9 @@ def app():
     :return: Flask app
     """
     params = {
-        "DEBUG": False,
-        "TESTING": True,
+        'DEBUG': False,
+        'TESTING': True,
+        'WTF_CSRF_ENABLED': False
     }
 
     _app = create_app(settings_override=params)
@@ -26,7 +27,7 @@ def app():
     ctx.pop()
 
 
-@pytest.yield_fixture(scope="function")
+@pytest.yield_fixture(scope='function')
 def client(app):
     """
     Setup an app client, this gets executed for each test function.
