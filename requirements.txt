@@ -8,3 +8,7 @@ gunicorn==19.4.5
 pytest==2.9.1
 pytest-cov==2.2.1
 flake8==2.5.4
+
+
+# Extensions.
+flask-debugtoolbar==0.10.0
