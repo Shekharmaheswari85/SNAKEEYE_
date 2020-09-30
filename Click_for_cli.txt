@@ -1,0 +1,13 @@
+for the eggs forlder in our project we have to specify this command in the docker file 
+RUN pip install --editable .
+
+Mahe sure that you have Click package installed in your machine 
+and have the have all the steup for using the cli scripts.
+
+execute this command first
+
+
+docker-compose exec website snakeeyes 
+
+for listing out all the cli command that we have
+
